@@ -126,7 +126,7 @@ public class ShowWindow extends JFrame{
 						R_F.SurrRouter[i] = "";
 					}
 				}
-				
+				simScreen.IsDivide = true;
 				simScreen.repaint();
 			}
 			
