@@ -9,6 +9,7 @@ public class SimScreen extends JPanel{
 	ArrayList<SimRouter> RouterList;
 	ArrayList<RouterPos> RouterPos;
 	ArrayList<NetPos> NetPos;
+	public boolean IsDivide = false;
 	
 	public SimScreen(ArrayList<SimRouter> mList){
 		this.RouterList = mList;
@@ -75,6 +76,15 @@ public class SimScreen extends JPanel{
 				g.drawString(TempR.mRouterTables.get(j).getDesNetWorkAddr() + "   " + TempR.mRouterTables.get(j).getDistance() + "   " + TempR.mRouterTables.get(j).getNextRouterAddr(),
 						this.RouterPos.get(i).Pos.x + 20, this.RouterPos.get(i).Pos.y + (j+1) * 20);
 			}
+		}
+		if (IsDivide){
+			//732.253
+			int x = 732;
+			int y = 253;
+			int len = 40;
+			g.setColor(Color.red);
+			g.drawLine(x - len / 2,y , x + len / 2, y);
+			g.drawLine(x,y - len / 2 , x, y + len / 2);
 		}
 	}
 	
